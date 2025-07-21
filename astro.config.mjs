@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://treefarmstudio.github.io',
+  site: 'https://Boatyn.github.io',
   base: '/cannonball',
   integrations: [sitemap()],
   vite: {
