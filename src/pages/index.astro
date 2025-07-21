@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Page.astro'
+import Container from '../components/Container.astro';
+import SignupForm from '../components/SignupForm.astro';
+
+const seo = {
+  title: 'MUYKO - Launching Soon',
+  description: 'Meet the future of clean sweetness – coming soon.',
+}
+---
+
+<style>
+  .hero-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    min-height: 70vh;
+    padding: 1rem;
+  }
+  
+  .hero__article {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    max-width: 700px;
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  @media (min-width: 480px) {
+    .hero__article {
+      padding: 2rem 1.5rem;
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .hero__article {
+      padding: 3.6rem 4rem;
+      width: 700px;
+    }
+    
+    .hero-container {
+      padding: 2rem 0;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .hero-container {
+      min-height: 60vh;
+    }
+    
+    .hero__article {
+      padding: 1rem 0.75rem;
+      width: 98%;
+    }
+  }
+  
+  .hero__article h1 {
+    font-size: calc(var(--step-5) * 0.578) !important;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero__article p {
+    font-size: calc(var(--step-0) * 0.78) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero__article p {
+      font-size: calc(var(--step-0) * 0.7) !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero__article p {
+      font-size: calc(var(--step-0) * 0.6) !important;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .hero__article p {
+      font-size: calc(var(--step-0) * 0.55) !important;
+    }
+  }
+</style>
+
+<Layout seo={seo}>
+  <div class="hero-container">
+    <article class="hero__article">
+      <h1 class="fade-in">Launching Soon</h1>
+      <p class="fade-in">Meet the future of clean sweetness – coming soon.</p>
+      <SignupForm />
+    </article>
+  </div>
+</Layout>
+
