@@ -25,8 +25,8 @@
   --step-4: clamp(2.59rem, calc(2.01rem + 2.93vw), 5.53rem);
   --step-5: clamp(3.11rem, calc(2.26rem + 4.25vw), 7.37rem);
 
-  --font-family-heading: 'Roboto Flex', sans-serif;
-  --font-family-body: 'Open Sans', sans-serif;
+  --font-family-heading: 'Inter', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
 
   --body-max-width: 1920px;
 
@@ -51,9 +51,23 @@ body {
   position: relative;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background: var(--theme-background) url('/assets/images/bg.svg') no-repeat;
-  background-size: cover;
-  background-position: center;
+  background: var(--theme-background) url('/assets/images/bg1.webp') no-repeat;
+  background-size: 100%;
+  background-position: center top;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: cover;
+    background-position: center 20%;
+  }
 }
 
 .flow>*+* {

@@ -5,7 +5,8 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: settings.site,
+  site: 'https://treefarmstudio.github.io',
+  base: '/cannonball',
   integrations: [sitemap()],
   vite: {
     ssr: {

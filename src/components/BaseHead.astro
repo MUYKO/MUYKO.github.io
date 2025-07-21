@@ -19,15 +19,13 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="/favicon.png" />
 <!-- Primary Meta Tags -->
 <title>{title || settings.title}</title>
 <meta name="title" content={title || settings.title} />
 <meta name="description" content={description || settings.description} />
 <meta name="generator" content={Astro.generator} />
 
-<link rel="preload" href="/assets/images/bg.svg" as="image">
+<link rel="preload" href="/assets/images/bg1.webp" as="image">
 <!-- settingsmap -->
 <link rel="sitemap" href="/sitemap.xml">
 <!-- Canonical -->
@@ -62,11 +60,11 @@ onload="this.onload=null;this.rel='stylesheet'">
     type="text/css">
 </noscript>
 
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-4,40,600;8..144,-4,59.1,600;8..144,-4,125,600&family=Open+Sans&display=swap" as="style"
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style"
 onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-4,40,600;8..144,-4,59.1,600;8..144,-4,125,600&family=Open+Sans&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
     type="text/css">
 </noscript>

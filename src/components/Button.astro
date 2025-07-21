@@ -1,5 +1,5 @@
 ---
-const {href, newTab} = Astro.props
+const {href, newTab, type} = Astro.props
 
 const Tag = href ? 'a' : 'button'
 ---
@@ -10,15 +10,20 @@ const Tag = href ? 'a' : 'button'
     align-items: center;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    background-color: var(--theme-primary);
-    color: var(--theme-on-primary);
+    background-color: #dc2626;
+    color: white;
     border: 2px solid transparent;
     transition: background-color 0.2s ease, border-color 0.2s ease;
     border-radius: 2rem;
     white-space: nowrap;
+    font-size: 0.8em;
+  }
+  
+  .btn:hover {
+    background-color: #b91c1c;
   }
 </style>
 
-<Tag href={href} class="btn" target={`${newTab ? `_blank` : ``}`} rel={`${newTab ? `noopener noreferrer` : ``}`}>
+<Tag href={href} class="btn" type={type} target={`${newTab ? `_blank` : ``}`} rel={`${newTab ? `noopener noreferrer` : ``}`}>
   <slot></slot>
 </Tag>

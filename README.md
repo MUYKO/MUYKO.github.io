@@ -7,9 +7,6 @@
   <a href="https://twitter.com/littlesticksdev">
   <img src="assets/twitter-badge.svg" alt="Follow Little Sticks on Twitter"/>
 </a>
-  <a href="https://littlesticks.lemonsqueezy.com/checkout/buy/ce15f246-6ffb-417d-b380-0745aeef69a9">
-    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
-  </a>
   <a href="https://littlesticks.dev/discord">
     <img src="assets/discord-badge.svg" alt="Join our Discord" />
   </a>
