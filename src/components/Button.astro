@@ -1,5 +1,5 @@
 ---
-const {href, newTab, type} = Astro.props
+const {href, newTab, type, class: className, ...rest} = Astro.props
 
 const Tag = href ? 'a' : 'button'
 ---
@@ -27,6 +27,13 @@ const Tag = href ? 'a' : 'button'
   }
 </style>
 
-<Tag href={href} class="btn" type={type} target={`${newTab ? `_blank` : ``}`} rel={`${newTab ? `noopener noreferrer` : ``}`}>
+<Tag 
+  href={href} 
+  class={`btn ${className || ''}`} 
+  type={type} 
+  target={`${newTab ? `_blank` : ``}`} 
+  rel={`${newTab ? `noopener noreferrer` : ``}`}
+  {...rest}
+>
   <slot></slot>
 </Tag>

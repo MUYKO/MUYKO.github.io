@@ -77,7 +77,7 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 200px;
+    height: 240px;
     min-width: 200px;
     flex: 1;
     max-width: 350px;
@@ -90,17 +90,22 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
+
+  .magazine-image-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
   
   .magazine-card img {
     max-height: 60px;
     max-width: 150px;
     object-fit: contain;
-    margin-bottom: 1rem;
-    flex-shrink: 0;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 60px;
   }
   
   .magazine-card:nth-child(2) img {
@@ -121,6 +126,10 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
     font-style: italic;
     text-align: center;
     width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
   }
   
   @media (max-width: 768px) {
@@ -143,11 +152,15 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
       padding: 0.75rem 0.5rem;
       flex: 1;
     }
+
+    .magazine-image-container {
+      height: 25px;
+      margin-bottom: 0.5rem;
+    }
     
     .magazine-card img {
       max-height: 25px !important;
       max-width: 60px !important;
-      margin-bottom: 0.5rem !important;
     }
     
     .magazine-card:nth-child(2) img {
@@ -183,11 +196,15 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
       padding: 0.5rem 0.25rem;
       height: 120px;
     }
+
+    .magazine-image-container {
+      height: 20px;
+      margin-bottom: 0.25rem;
+    }
     
     .magazine-card img {
       max-height: 20px !important;
       max-width: 50px !important;
-      margin-bottom: 0.25rem !important;
     }
     
     .magazine-card:nth-child(2) img {
@@ -585,10 +602,12 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
       gap: 1rem;
       align-items: stretch;
       justify-content: flex-start;
+      max-width: 500px;
+      margin: 0 auto;
     }
     
     .signup-form button {
-      align-self: flex-start;
+      align-self: center;
       padding: 0.75rem 2rem;
     }
   }
@@ -615,12 +634,12 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
 
   .bottle-section {
     background: white;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem 2rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid #e5e5e5;
   }
   
   .bottle-container {
@@ -846,15 +865,21 @@ import WhiteMFImage from '../../public/assets/images/white-mf.png';
   <section class="magazine-section">
     <div class="magazine-container">
       <div class="magazine-card">
-        <Image src={MHLogo} alt="Men's Health" />
+        <div class="magazine-image-container">
+          <Image src={MHLogo} alt="Men's Health" />
+        </div>
         <p>"Monk fruit contains no calories and does not spike blood sugar but it does provide a very sweet taste that can be used in recipes or beverages."</p>
       </div>
       <div class="magazine-card">
-        <Image src={WellGoodLogo} alt="Well+Good" />
+        <div class="magazine-image-container">
+          <Image src={WellGoodLogo} alt="Well+Good" />
+        </div>
         <p>"…monk fruit seems to have beaten the likes of erythritol, stevia, and Splenda to be the alt sweetener du jour."</p>
       </div>
       <div class="magazine-card">
-        <Image src={VogueLogo} alt="Vogue" />
+        <div class="magazine-image-container">
+          <Image src={VogueLogo} alt="Vogue" />
+        </div>
         <p>"Derived from the fruit of the monk fruit plant, this natural sweetener contains mogrosides that do not raise blood sugar levels; it does not contain any glucose or fructose."</p>
       </div>
     </div>
