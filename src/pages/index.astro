@@ -75,7 +75,8 @@ const seo = {
   
   .hero__article h1 {
     font-size: calc(var(--step-5) * 0.578) !important;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
   }
   
   .hero__article p {
@@ -84,24 +85,47 @@ const seo = {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
   }
   
   @media (max-width: 768px) {
+    .hero__article h1 {
+      font-size: calc(var(--step-5) * 0.65) !important;
+    }
+    
     .hero__article p {
       font-size: calc(var(--step-0) * 0.7) !important;
+      white-space: normal;
     }
   }
   
   @media (max-width: 480px) {
+    .hero__article h1 {
+      font-size: calc(var(--step-5) * 0.8) !important;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      width: 100%;
+    }
+    
     .hero__article p {
-      font-size: calc(var(--step-0) * 0.6) !important;
+      font-size: calc(var(--step-0) * 0.65) !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 1rem;
     }
   }
   
   @media (max-width: 375px) {
+    .hero__article h1 {
+      font-size: calc(var(--step-5) * 0.75) !important;
+    }
+    
     .hero__article p {
-      font-size: calc(var(--step-0) * 0.55) !important;
+      font-size: calc(var(--step-0) * 0.6) !important;
     }
   }
 </style>
